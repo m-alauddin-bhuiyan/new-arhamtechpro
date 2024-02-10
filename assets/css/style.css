@@ -31,7 +31,7 @@ Root Elements
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
@@ -39,11 +39,11 @@ Root Elements
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--color-blue);
+    background:linear-gradient( #002EAE, #F6A114);
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-a);
+    background:linear-gradient(#F6A114,#002EAE);
 }
 
 /* ====================================
