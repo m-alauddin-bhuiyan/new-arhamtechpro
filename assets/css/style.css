@@ -10,29 +10,9 @@ Fonts
     font-family: 'Inter', sans-serif;
 }
 
-
 /* ====================================
-Body Default CSS
+Root Elements 
 ====================================*/
-
-* {
-    margin: 0;
-    padding: 0;
-}
-body{
-    font-family: 'Inter', sans-serif;
-    /* overflow: hidden; */
-}
-ul,ol{
-    list-style: none;
-    padding-left: 20px;
-}
-a{
-    text-decoration: none;
-}
-
-
-
 :root{
     --color-blue: #002EAE;
     --color-a: #F6A114;
@@ -46,7 +26,47 @@ a{
     --para-black-3: #656565;
     --btn-bg-1: #A9DAFF;
     --main-white: #fff;
+    --gradiant-a: linear-gradient(128deg, #E5F4FF 0%, #FFF4E9 100%);
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--gradiant-a);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-blue);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-a);
+}
+
+/* ====================================
+Body Default CSS
+====================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+ul,ol{
+    list-style: none;
+    padding-left: 20px;
+}
+a{
+    text-decoration: none;
+}
+
+
 
 
 
@@ -62,6 +82,14 @@ Reusable Componant
 
 .font-72{
     font-size: 72px;
+    line-height: 125%;
+}
+.font-62{
+    font-size: 62px;
+    line-height: 125%;
+}
+.font-56{
+    font-size: 56px;
     line-height: 125%;
 }
 .font-48{
@@ -361,7 +389,9 @@ Header Section
     color: var(--base-black);
     font-weight: 500;
 }
-.main-navbar.index-2.navbar-expand-lg .navbar-nav .nav-link:hover::before , .footer-top .footer-box ul li a:hover:before{
+.main-navbar .nav-link:hover::before ,
+.main-navbar .nav-link.active::before,
+.footer-top .footer-box ul li a:hover:before{
     width: 100%;
 }
 .main-navbar.navbar-expand-lg .navbar-nav .nav-link.active , .main-navbar.navbar-expand-lg .navbar-nav .nav-link:hover{
@@ -371,7 +401,7 @@ Header Section
     opacity: 0;
     visibility: hidden;
 }
-.service-sub-menu span{
+.serive-main-submenu{
     padding: 35px 0px;
 }
 .service-submenu-container{
@@ -394,10 +424,13 @@ Header Section
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    z-index: -1
+    opacity: 0;
+    z-index: -1;
+    border-radius: 8px;
 }
 .service-menu-images img.active-image{
     z-index: 1;
+    opacity: 1;
 }
 .service-sub-menu:hover .service-submenu-container{
     transform: perspective(800px)rotateX(0deg)rotateY(0)rotate(0);
@@ -433,8 +466,26 @@ span#animated_message_button svg {
 }
 .service-submenu-container{
     padding: 48px 0px;
+    height: 75vh;
+    
 }
-
+.submenu-background-blur{
+    content: '';
+    top: 104px;
+    z-index: -2;
+    background: #0f172a69;
+    filter: blur(100%);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    /* transition: .3s linear; */
+    bottom: 0;
+}
+.submenu-background-blur.active-blur{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 2;
+}
 
 
 
@@ -484,11 +535,11 @@ Banner Section
     opacity: 0;
     transition: .3s ease;
 }
-.single-service-menu:hover img{
+.single-service-menu a:hover img{
     transform: translateX(0px);
     opacity: 1;
 }
-.single-service-menu:hover a{
+.single-service-menu a:hover{
     font-weight: 600 !important;
 }
 .cluth-review-area ,.round-indecation{
@@ -1041,6 +1092,28 @@ label.animated_lebel {
     top: -32px;
     color: var(--base-black);
 }
+
+
+/* ======================================
+Single Pages Componant Design
+======================================*/
+.single-page-banner{
+    padding-top: 170px;
+    padding-bottom: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
 Footer  Section
