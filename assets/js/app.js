@@ -22,3 +22,15 @@ $(window).scroll(function () {
     lastScrollTop = newScrolltop <= 0 ? 0 : newScrolltop;
 
 });
+
+
+
+function changeServiceImage(target_class){
+    $(".single-service-images").removeClass('active-image');
+    $("#"+target_class).addClass('active-image');
+}
+
+
+$('.single-service-menu span').on("mouseout",function(){
+    $("#ui-ux-image").addClass('active-image');
+})

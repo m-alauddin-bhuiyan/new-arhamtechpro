@@ -21,6 +21,7 @@ Body Default CSS
 }
 body{
     font-family: 'Inter', sans-serif;
+    /* overflow: hidden; */
 }
 ul,ol{
     list-style: none;
@@ -43,6 +44,8 @@ a{
     --base-black-2: #111;
     --base-black-3: #1B1B1B;
     --para-black-3: #656565;
+    --btn-bg-1: #A9DAFF;
+    --main-white: #fff;
 }
 
 
@@ -111,7 +114,7 @@ Reusable Componant
     opacity: 0;
     right: 60px;
     transform: translateY(-50%);
-    filter: invert(1);
+    filter: brightness(0) invert(1) ;
 }
 .button-on-blue-bg .button-right-arrow{
     filter: invert(0) !important;
@@ -124,13 +127,17 @@ Reusable Componant
 .new-animated-button:hover .button-text{
    padding-left: 0;
    padding-right: 33px;
-   color: var(--base-white);
+   color: var(--main-white);
    
 }
+
 .button-on-blue-bg:hover .button-text {
     color: var(--color-blue);
     padding-right: 38px;
 }
+/* .btn-bg-black-hover:hover .button-text{
+    color: var(--base-black);
+} */
 .new-animated-button:hover .button-left-arrow{
     opacity: 0;
     left: 50px;
@@ -176,6 +183,9 @@ Specings
 }
 .mt-60{
     margin-top: 60px;
+}
+.mt-40{
+    margin-top: 40px;
 }
 .mb-80{
     margin-bottom: 80px;
@@ -237,13 +247,15 @@ Body Default Colors
 .hover-color-blue:hover , .color-blue{
     color:var(--color-blue)
 }
-
-
-.bg-blue,.hover-bg-blue{
-    background: var(--color-blue);
+.hover-main-white:hover{
+    color: var(--main-white);
 }
+
 .bg-a{
     background: var(--color-a);
+}
+.bg-blue,.hover-bg-blue:hover{
+    background: var(--color-blue);
 }
 .bg-black{
     background: var(--base-black);
@@ -260,7 +272,9 @@ Body Default Colors
 .bg-4{
     background: var(--bg-white-4);
 }
-
+.btn-bg-black-hover:hover{
+    background: var(--btn-bg-1);
+}
 
 
 
@@ -371,6 +385,20 @@ Header Section
     opacity: 1;
     visibility: visible;
 }
+.service-menu-images{
+    position: relative;
+    height: 340px;
+}
+.service-menu-images img{
+    width: 85%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1
+}
+.service-menu-images img.active-image{
+    z-index: 1;
+}
 .service-sub-menu:hover .service-submenu-container{
     transform: perspective(800px)rotateX(0deg)rotateY(0)rotate(0);
 }
@@ -415,16 +443,11 @@ Banner Section
 ====================================== */
 .banner{
     height: 100vh;
-    /* background: linear-gradient(180deg, #002EAE 0%, rgba(2, 47, 174, 0.98) 56.1%, rgba(13, 55, 178, 0.84) 73.08%, #F3D8FF 100%); */
-    background: linear-gradient(180deg, #000 31.41%, rgba(32, 21, 3, 0.80) 56.22%, rgba(77, 50, 6, 0.70) 76.63%, rgba(114, 74, 9, 0.60) 87.19%, rgba(159, 104, 13, 0.40) 99.98%, #F6A114 100%),linear-gradient(#000,#000000c4);
-}
-.banner-2{
-    position: relative;
     background: linear-gradient(107deg, #E5F4FF 0%, #FFF4E9 100%);
+    position: relative;
 }
-.banner-2::before{
+.banner::before{
     position: absolute;
-    /* background: linear-gradient(180deg, rgba(15, 23, 42, 0.00), rgba(0, 46, 174, 0.14)); */
     background: linear-gradient(0deg, rgba(15,23,42,0.05) 28%, rgba(10,46,174,0) 100%);
     height: 100%;
     width: 100%;
@@ -453,15 +476,6 @@ Banner Section
     width: 120px !important;
     height: 120px !important;
 }
-
-.single-service-images{
-    width: 70%;
-}
-.single-service-images.big{
-    width: 100%;
-
-}
-
 .single-service-menu:not(:last-child){
     margin-bottom: 15px;
 }
@@ -487,34 +501,29 @@ Banner Section
 .banner-scroll-down {
     position: relative;
     border-radius: 100px;
-    background: #A9DAFF;
+    background: #DFE1E7;
     height: 116px;
     width: 116px;
     padding: 10px;
 }
-.banner-2 .banner-scroll-down{
-    background: #DFE1E7;
-}
+
 .scroll-sown-icon {
     position: absolute;
     display: flex;
     width: 48px;
     height: 48px;
     border-radius: 100%;
-    background: var(--base-white);
+    background: var(--color-blue);
+    padding: 5px;
     color: var(--color-a);
     justify-content: center;
     align-items: center;
     top: 50%;
     left: 50%;
-    padding-left: 1px;
     font-size: 24px;
     transform: translateX(-24px) translateY(-24px);
 }
-.banner-2 .scroll-sown-icon{
-    background: var(--base-black);
-    padding: 5px;
-}
+
 .banner-scroll-down svg{
     fill: var(--base-black);
     width: 100%;
@@ -523,9 +532,7 @@ Banner Section
     transform-origin: center center;
     animation: 10s linear infinite spin-banner-scroll-down;
 }
-.banner-2  .banner-scroll-down svg{
-    fill: var(--base-black);
-}
+
 .scroll-sown-icon svg text {
     font-weight: 500;
     letter-spacing: .6px;
@@ -546,10 +553,10 @@ Banner Section
 Video Section 
 ======================================*/
 .showreel-section {
-    /* background:  linear-gradient(128deg, #E5F4FF 0%, #FFF4E9 100%);; */
     position: relative;
     z-index: 1;
-    height: 1135px;
+    height: 1365px;
+    
 }
 .showreel-section::before{
     position: absolute;
@@ -559,7 +566,8 @@ Video Section
     width: 100%;
     top: 50px;
     left: 0;
-    background: var(--bg-white-4);
+    background: linear-gradient(107deg, #E5F4FF 0%, #FFF4E9 100%);
+    /* background: var(--bg-white-4); */
 }
 .video-container {
     margin: auto;
@@ -571,6 +579,13 @@ Video Section
 .overview-detail{
     transform: translateY(-150px);
 }
+
+.single-overview.text-center:not(:last-child) {
+    padding-right: 50px;
+    border-right: 2px solid;
+}
+
+
 /* ======================================
 Service Section 
 ======================================*/
