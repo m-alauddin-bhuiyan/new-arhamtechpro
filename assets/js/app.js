@@ -44,3 +44,8 @@ function changeServiceImage(target_class){
 $('.single-service-menu span').on("mouseout",function(){
     $("#ui-ux-image").addClass('active-image');
 })
+
+
+
+
+

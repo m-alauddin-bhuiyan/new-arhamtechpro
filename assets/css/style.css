@@ -26,6 +26,7 @@ Root Elements
     --para-black-3: #656565;
     --btn-bg-1: #A9DAFF;
     --main-white: #fff;
+    --bg-c:#E6EAF7;
     --gradiant-a: linear-gradient(128deg, #E5F4FF 0%, #FFF4E9 100%);
 }
 
@@ -95,7 +96,9 @@ Reusable Componant
 .font-48{
     font-size: 48px;
 }
-
+.font-20{
+    font-size: 20px;
+}
 .border-color-base-white{
     border-color: var(--base-white);
 }
@@ -206,6 +209,9 @@ Specings
 .section-padding-sm{
     padding: 80px 0px;
 }
+.mt-100{
+    margin-top: 100px;
+}
 .mt-80{
     margin-top: 80px;
 }
@@ -281,6 +287,9 @@ Body Default Colors
 
 .bg-a{
     background: var(--color-a);
+}
+.bg-c{
+    background: var(--bg-c);
 }
 .bg-blue,.hover-bg-blue:hover{
     background: var(--color-blue);
@@ -1101,12 +1110,39 @@ Single Pages Componant Design
     padding-top: 170px;
     padding-bottom: 80px;
 }
+.single-page-banner-box{
+    padding: 60px 48px;
+}
+.single-page-banner-image{
+    top: -40px;
+}
+.work-box{
+    padding: 40px;
+    transition: .3s ease;
+}
+.work-box h3{
+    font-size: 32px;
+    line-height: normal;
+    margin-bottom: 0;
+    padding-top: 4px;
+}
 
-
-
-
-
-
+.work-box:hover , .work-box.active{
+    background: var(--color-a);
+    cursor: pointer;
+}
+.work-box:hover:active{
+    background: red;
+}
+.work-box:hover h3 , .work-box.active h3{
+    color: var(--base-black);
+}
+.work-box:hover p , .work-box.active p{
+    color: var(--base-black-3);
+}
+.work-box:hover .box-title-box , .work-box.active .box-title-box{
+    background: var(--base-white);
+}
 
 
 
