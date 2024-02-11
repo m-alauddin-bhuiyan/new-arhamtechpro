@@ -25,6 +25,7 @@ Root Elements
     --base-black-3: #1B1B1B;
     --para-black-3: #656565;
     --btn-bg-1: #A9DAFF;
+    --btn-bg-2:#E8E8E8;
     --main-white: #fff;
     --bg-c:#E6EAF7;
     --gradiant-a: linear-gradient(128deg, #E5F4FF 0%, #FFF4E9 100%);
@@ -154,7 +155,7 @@ Reusable Componant
 }
 
 .button-on-blue-bg:hover{
-    background: #E8E8E8;
+    background: var(--btn-bg-2);
     color: var(--color-blue);
 }
 .new-animated-button:hover .button-text{
@@ -168,17 +169,17 @@ Reusable Componant
     color: var(--color-blue);
     padding-right: 38px;
 }
-.btn-bg-black-hover:hover .button-text{
+.btn-bg-black-hover:hover .button-text {
     color: var(--base-black);
 }
 .btn-bg-black-hover:hover .button-right-arrow{
     filter: invert(0) !important;
 }
-.new-animated-button:hover .button-left-arrow{
+.new-animated-button:hover .button-left-arrow {
     opacity: 0;
     left: 50px;
 }
-.new-animated-button:hover .button-right-arrow{
+.new-animated-button:hover .button-right-arrow {
     opacity: 1;
     right: 33px;
 }
@@ -293,6 +294,9 @@ Body Default Colors
 .bg-a , .hover-bg-a:hover{
     background: var(--color-a);
 }
+.bg-base-white{
+    background: var(--base-white);
+}
 .bg-c{
     background: var(--bg-c);
 }
@@ -324,7 +328,7 @@ Body Default Colors
     background: var(--bg-white-4);
 }
 .btn-bg-black-hover:hover{
-    background: var(--btn-bg-1);
+    background: var(--btn-bg-2);
 }
 
 
@@ -668,46 +672,22 @@ Service Section
 }
 .single-service{
     height: 112px;
-    transition: .8s ease-in-out;
+    /* transition: .3s ease-in-out; */
     margin-bottom: 20px;
     padding: 0px 65px;
     cursor: url('../img/icons/arrow-small-orange-bg.svg'),auto;
-}
-.single-service-link{
     opacity: .65;
 }
-.single-service:hover .single-service-link{
+
+.single-service:hover{
     opacity: 1;
 }
-/* .single-service-link{
-    left: 58px;
-    transform: translateY(-50%);
-    transition: .5s ease;
+.single-service:hover .new-animated-button {
+    background: var(--color-a);
 }
-.single-service-link-image{
-    right: 58px;
-    transform: translateY(-50%);
-    transition: .5s ease;
-}
-.single-service:hover , .single-service.active{
-    opacity: 1;
-    cursor: pointer;
-    border: 1px solid rgba(220, 225, 233, 0.65);
-    cursor: url('../img/icons/arrow-small-orange-bg.svg'),auto;
-}
-.single-service:hover .single-service-link , .single-service.active .single-service-link{
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-}
-.single-service:hover .single-service-link.developemnt, .single-service.active .single-service-link.developemnt{
-    left: 47%;
-    transform: translateX(-47%) translateY(-50%);
-}
-.hover-none:hover ,
-.single-service:hover .single-service-link-image .hover-none, .single-service.active .single-service-link-image .hover-none{
-    display: none;
-    
-} */
+
+
+
 .hover-none{
     filter: invert(1);
 }
