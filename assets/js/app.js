@@ -36,17 +36,14 @@ $('.service-sub-menu').on("mouseout",function(){
     $(".submenu-background-blur").removeClass('active-blur');
 });
 
-function changeServiceImage(target_class){
-    $(".single-service-images").removeClass('active-image');
-    $("#"+target_class).addClass('active-image');
-}
+// function changeServiceImage(target_class){
+//     $(".single-service-images").removeClass('active-image');
+//     $("#"+target_class).addClass('active-image');
+// }
 
-$('.single-service-menu span').on("mouseout",function(){
-    $("#ui-ux-image").addClass('active-image');
-})
-
-
-
+// $('.single-service-menu span').on("mouseout",function(){
+//     $("#ui-ux-image").addClass('active-image');
+// });
 
 $('.portfolio-categories span').click(function(event){
     $('.portfolio-categories span').removeClass('active-category');

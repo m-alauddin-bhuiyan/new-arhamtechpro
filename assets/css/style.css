@@ -425,18 +425,21 @@ Header Section
     color: var(--color-blue);
 }
 .service-submenu{
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0;
+    visibility: hidden; */
+    z-index: 11;
 }
 .serive-main-submenu{
     padding: 35px 0px;
 }
 .service-submenu-container{
+    /* z-index: 11; */
     top: 75px;
     transition: .3s ease;
     transform-origin: 50% 0;
     transform-style: preserve-3d;
-    transform: perspective(800px)rotateX(-10deg)rotateY(0)rotate(0);
+    background: #fafafa;
+    /* transform: perspective(800px)rotateX(-10deg)rotateY(0)rotate(0); */
 }
 .service-sub-menu:hover .service-submenu {
     opacity: 1;
@@ -672,10 +675,8 @@ Service Section
 }
 .single-service{
     height: 112px;
-    /* transition: .3s ease-in-out; */
     margin-bottom: 20px;
     padding: 0px 65px;
-    cursor: url('../img/icons/arrow-small-orange-bg.svg'),auto;
     opacity: .65;
 }
 
@@ -686,26 +687,25 @@ Service Section
     background: var(--color-a);
 }
 
-
-
-.hover-none{
-    filter: invert(1);
-}
-.hover-show{
-    display: none;
-    
-}
-
-.single-service:hover .single-service-link, .single-service.active .single-service-link{
-    cursor: url('../img/icons/arrow-small-orange-bg.svg'),auto;
-}
-
 .single-service:hover .single-service-link .service-number, .single-service.active .single-service-link .service-number{
     color: var(--base-white);
-    
 }
-.filter-inverse{
-    filter: invert(0);
+.single-service:hover .new-animated-button .button-left-arrow {
+    opacity: 0;
+    left: 50px;
+}
+.single-service:hover .btn-bg-black-hover .button-text {
+    color: var(--base-black);
+    padding-left: 0;
+    padding-right: 33px;
+}
+.single-service:hover .new-animated-button .button-right-arrow {
+    opacity: 1;
+    right: 33px;
+}
+
+.single-service:hover .btn-bg-black-hover .button-right-arrow {
+    filter: invert(0) !important;
 }
 
 /* ======================================
