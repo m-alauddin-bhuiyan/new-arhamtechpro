@@ -166,9 +166,12 @@ Reusable Componant
     color: var(--color-blue);
     padding-right: 38px;
 }
-/* .btn-bg-black-hover:hover .button-text{
+.btn-bg-black-hover:hover .button-text{
     color: var(--base-black);
-} */
+}
+.btn-bg-black-hover:hover .button-right-arrow{
+    filter: invert(0) !important;
+}
 .new-animated-button:hover .button-left-arrow{
     opacity: 0;
     left: 50px;
@@ -1126,13 +1129,9 @@ Single Pages Componant Design
     margin-bottom: 0;
     padding-top: 4px;
 }
-
-.work-box:hover , .work-box.active{
+.work-box:hover{
     background: var(--color-a);
     cursor: pointer;
-}
-.work-box:hover:active{
-    background: red;
 }
 .work-box:hover h3 , .work-box.active h3{
     color: var(--base-black);
@@ -1143,8 +1142,6 @@ Single Pages Componant Design
 .work-box:hover .box-title-box , .work-box.active .box-title-box{
     background: var(--base-white);
 }
-
-
 
 
 
