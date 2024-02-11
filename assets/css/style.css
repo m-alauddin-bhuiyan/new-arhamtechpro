@@ -28,6 +28,8 @@ Root Elements
     --main-white: #fff;
     --bg-c:#E6EAF7;
     --gradiant-a: linear-gradient(128deg, #E5F4FF 0%, #FFF4E9 100%);
+    --gradiant-b: linear-gradient(#FEFEFE 50%, #FEFEFE 100%);
+    
 }
 
 /* width */
@@ -288,7 +290,7 @@ Body Default Colors
     color: var(--main-white);
 }
 
-.bg-a{
+.bg-a , .hover-bg-a:hover{
     background: var(--color-a);
 }
 .bg-c{
@@ -300,14 +302,23 @@ Body Default Colors
 .bg-black{
     background: var(--base-black);
 }
+.bg-white-2{
+    background: var(--para-white-2);
+}
 .bg-black-2{
     background: var(--base-black-2);
 }
 .bg-black-3{
     background: var(--base-black-3);
 }
+.bg-para-3{
+    background:var(--para-black-3);
+}
 .gradiant-bg-a{
-    background: linear-gradient(128deg, #E5F4FF 0%, #FFF4E9 100%);;
+    background: var(--gradiant-a);
+}
+.gradiant-bg-b{
+    background: var(--gradiant-b);
 }
 .bg-4{
     background: var(--bg-white-4);
@@ -985,7 +996,7 @@ Blog Section
     line-height: 30px;
 }
 .blog-content{
-    height: 165px;
+    /* height: 165px; */
 }
 
 
@@ -1142,6 +1153,91 @@ Single Pages Componant Design
 .work-box:hover .box-title-box , .work-box.active .box-title-box{
     background: var(--base-white);
 }
+
+
+/* ======================================
+ Blog Page
+======================================*/
+
+.from-with-input{
+    padding: 12px 8px 12px 32px;
+}
+.from-with-input input{
+    height: 33px;
+    margin-top: 2px;
+}
+.from-with-input input::placeholder{
+    color: #AAAAAA;
+}
+.from-with-input input:focus  , .from-with-input input:focus-visible{
+    outline: 0;
+    border: 0;
+}
+.main-blog-categories{
+    width: 100%;
+    padding: 20px 0px;
+    overflow-x: scroll;
+}
+.main-blog-categories::-webkit-scrollbar{
+    display: none;
+}
+.main-blog-categories .portfolio-categories{
+    width: max-content;
+}
+.arrow-right-blog-slider{
+    background: linear-gradient(270deg, #fef4eb 14.47%, rgba(255, 255, 255, 0.94) 34.52%, rgb(255 255 255 / 0%) 102.22%);
+    padding-left: 100px;
+    height: 63px;
+    /* border-radius: 100px; */
+}
+.blog-swap-icon-container{
+    height: 75px;
+    width: 75px;
+    border-radius: 100px;
+    margin-top: -4px;
+}
+.portfolio-categories span.active-category{
+    background: var(--color-a);
+}
+.main-blog-page .single-blog{
+    margin-bottom: 40px;
+}
+.main-blog-page .blog-categories span{
+    background: #B0BEE6;
+    color: #5473C9;
+    transition: .3s ease;
+}
+.main-blog-page .blog-categories span:hover{
+    background: var(--color-blue);
+    color: var(--base-white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

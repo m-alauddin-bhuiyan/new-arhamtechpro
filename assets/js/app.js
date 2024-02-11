@@ -48,4 +48,7 @@ $('.single-service-menu span').on("mouseout",function(){
 
 
 
-
+$('.portfolio-categories span').click(function(event){
+    $('.portfolio-categories span').removeClass('active-category');
+    $(event.target).addClass('active-category');
+});
