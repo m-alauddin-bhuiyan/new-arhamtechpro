@@ -31,8 +31,17 @@ $(window).scroll(function () {
 
 $('.service-sub-menu').on("mouseover",function(){
     $(".submenu-background-blur").addClass('active-blur');
+    $(".service-submenu").addClass('open-submenu');
 });
 $('.service-sub-menu').on("mouseout",function(){
+    $(".submenu-background-blur").removeClass('active-blur');
+    $(".service-submenu").removeClass('open-submenu');
+});
+
+$('.service-submenu').on("mouseover",function(){
+    $(".submenu-background-blur").addClass('active-blur');
+});
+$('.service-submenu').on("mouseout",function(){
     $(".submenu-background-blur").removeClass('active-blur');
 });
 
