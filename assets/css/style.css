@@ -183,7 +183,7 @@ Reusable Componant
     right: 33px;
 }
 
-.bg-text{
+.main-white-text{
     color: var(--base-white);
 }
 .section-title{
@@ -670,9 +670,16 @@ Service Section
     height: 112px;
     transition: .8s ease-in-out;
     margin-bottom: 20px;
-    opacity: .65;
+    padding: 0px 65px;
+    cursor: url('../img/icons/arrow-small-orange-bg.svg'),auto;
 }
 .single-service-link{
+    opacity: .65;
+}
+.single-service:hover .single-service-link{
+    opacity: 1;
+}
+/* .single-service-link{
     left: 58px;
     transform: translateY(-50%);
     transition: .5s ease;
@@ -696,13 +703,13 @@ Service Section
     left: 47%;
     transform: translateX(-47%) translateY(-50%);
 }
-.hover-none{
-    filter: invert(1);
-}
 .hover-none:hover ,
 .single-service:hover .single-service-link-image .hover-none, .single-service.active .single-service-link-image .hover-none{
     display: none;
     
+} */
+.hover-none{
+    filter: invert(1);
 }
 .hover-show{
     display: none;
