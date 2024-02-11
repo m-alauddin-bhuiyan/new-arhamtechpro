@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./assets/img/fav-icon.png" type="image/x-icon">
+
+    <!-- <link rel="icon" href="./assets/img/fav-icon-2.gif" type="image/gif" > -->
+    <link rel="icon" href="assets/img/fav0.png" id="favIcon" type="image/gif" >
 
     <title>Arham Techpro - Global UI/UX Design and Web Development Agency.</title>
 
@@ -161,7 +163,7 @@
                 <div class="round-indecation d-flex justify-content-end">
                     <div class="banner-scroll-down">
                         <a href="#">
-                            <img src="./assets/img/icons/logo_mid.svg" class="scroll-sown-icon" alt="Logo MID">
+                            <img src="./assets/img/fav-icon.gif" class="scroll-sown-icon" alt="Logo MID">
                             <svg viewBox="0 0 100 100" width="100" height="100">
                                 <defs>
                                     <path id="circle" d="
@@ -170,9 +172,9 @@
                                     a 37,37 0 1,1 74,0
                                     a 37,37 0 1,1 -74,0"></path>
                                 </defs>
-                                <text font-size="14">
+                                <text font-size="13">
                                     <textPath xlink:href="#circle">
-                                        ✦ LET'S WORK GREAT TOGETHER 
+                                        ✦ SCROLL DOWN ✦ SCROLL DOWN
                                     </textPath>
                                 </text>
                             </svg>
@@ -1319,6 +1321,19 @@
             
         });
 
+    </script>
+
+
+    <script>
+    window.onload = function() {
+     var faviconIndex = 0;
+     var favicon = document.getElementById('favIcon')
+     setInterval(function() {
+             favicon.href = 'assets/img/fav' + faviconIndex + ".png";
+             faviconIndex++;
+             faviconIndex %= 2;
+       }, 1000);
+    };
     </script>
 
 
