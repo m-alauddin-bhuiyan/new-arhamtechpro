@@ -432,21 +432,30 @@ Header Section
     color: var(--color-blue);
 }
 .service-submenu{
-    transform: scaleY(0);
     z-index: 999999999;
-    padding: 30px 0px 35px 0px;
     transition: .3s ease;
     transform-origin: top;
+    height: 0px;
+    overflow: hidden;
 }
 .service-on-menu{
     margin-bottom: 60px;
+    padding-top: 38px;
+}
+.service-on-menu.main-navbar.index-2.navbar-expand-lg .navbar-nav .nav-link{
+    color: var(--base-white);
+}
+.service-on-menu.main-navbar.index-2.navbar-expand-lg .navbar-nav .nav-link:hover , .service-on-menu.main-navbar.index-2.navbar-expand-lg .navbar-nav .nav-link.active{
+    color: var(--color-a);
+}
+.service-on-menu.main-navbar.index-2.navbar-expand-lg .navbar-nav .nav-link::before{
+    background: var(--color-a);
 }
 .service-submenu:hover{
-
-    transform: scaleY(1);
+    height: 90vh;
 }
 .service-submenu.open-submenu{
-    transform: scaleY(1);
+    height: 90vh;
 }
 
 .service-submenu-container{
@@ -471,7 +480,7 @@ Header Section
     color: #989898;
 }
 .submenu-socails{
-    padding: 53px 18px 50px;
+    padding: 77px 18px 25px;
 }
 .footer-social-icon.header-social {
     border-color: #4B4B4B;
@@ -521,7 +530,7 @@ Header Section
     rotate: 180deg;
     transition: .3s ease;
 }
-span#animated_message_button svg {
+span#animated_message_button svg ,  span#animated_message_button2 svg{
     width: 34px !important;
 }
 .fw-500{
